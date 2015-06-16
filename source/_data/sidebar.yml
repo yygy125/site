@@ -1,0 +1,15 @@
+docs:
+  getting_started:
+    overview: index.html
+    setup: setup.html
+    configuration: configuration.html
+  basic_usage:
+    server: server.html
+    menu: menu.html
+    user: user.html
+    user_group: user-group.html
+  customization:
+    cache: cache.html
+  miscellaneous:
+    troubleshooting: troubleshooting.html
+    contributing: contributing.html

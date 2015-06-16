@@ -18,7 +18,7 @@ before_install:
   - git config --global user.name "overtrue"
   - git config --global user.email anzhengchao@gmail
   # Clone the repository
-  - git clone https://github.com/easywechat/easywechat.github.io .deploy_git
+  - git clone git@github.com:EasyWeChat/easywechat.github.io.git .deploy_git
 
 install:
   # Install Hexo

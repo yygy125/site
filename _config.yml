@@ -36,6 +36,7 @@ deploy:
   type: git
   repo: git@github.com:easywechat/easywechat.github.io.git
 
+swiftype_key: mHn47RHm99tBxyZcKu58
 google_analytics: UA-64156348-1
 github: overtrue/wechat
 twitter: anzhengchao

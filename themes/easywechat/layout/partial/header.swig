@@ -7,7 +7,7 @@
       <ul>
         {{ header_menu('main-nav') }}
         <li class="main-nav-item">
-          <a href="https://github.com/{{ config.github }}" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+          <a href="https://github.com/{{ config.github }}" class="main-nav-link">github</a>
         </li>
       </ul>
     </nav>

@@ -1,7 +1,7 @@
 menu:
   home: 首页
   docs: 文档
-  news: 新闻
+  news: 动态
 
 index:
   get_started: 开始使用

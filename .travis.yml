@@ -21,6 +21,9 @@ before_install:
   - git clone git@github.com:EasyWeChat/easywechat.github.io.git .deploy_git
 
 install:
+  # Update docs.
+  - git fetch docs zh-cn
+  - git fetch docs en
   # Install Hexo
   - npm install hexo-cli -g
   # Install graphicsmagick

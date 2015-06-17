@@ -7,5 +7,5 @@ public/
 .deploy*/
 .travis/ssh_key
 .travis/ssh_key.pub
-source/docs/
-source/en/docs/
+source/docs/*
+source/en/docs/*

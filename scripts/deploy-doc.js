@@ -16,6 +16,7 @@ travis.authenticate({
           if (err) {
             return console.error(err);
           }
+          console.log('ssssssss');
           console.log(res);
           travis.requests.post({
             build_id: res.builds[0].id

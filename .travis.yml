@@ -22,8 +22,8 @@ before_install:
 
 install:
   # Update docs.
-  - git fetch docs zh-cn
-  - git fetch docs en
+  - git subtree add --prefix=source/docs/ git@github.com:EasyWeChat/docs.git zh-cn
+  - git subtree add --prefix=source/docs/ git@github.com:EasyWeChat/docs.git en
   # Install Hexo
   - npm install hexo-cli -g
   # Install graphicsmagick

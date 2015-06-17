@@ -10,6 +10,7 @@ travis.authenticate({
     if (err) {
       return console.error(err);
     }
+    console.log(res);
 
     travis.repos(repo.split('/')[0], repo.split('/')[1]).builds.get(
       function (err, res) {

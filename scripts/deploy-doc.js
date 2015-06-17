@@ -22,7 +22,7 @@ travis.authenticate({
             if (err) {
               return console.error(err);
             }
-            console.log(res.flash[0].notice);
+            console.log(res);
           });
     });
 });

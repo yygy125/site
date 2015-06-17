@@ -22,6 +22,7 @@ before_install:
 
 install:
   # Update docs.
+  - sudo apt-get update && sudo apt-get install git
   - git --version
   - git subtree add --prefix=source/docs/ git@github.com:EasyWeChat/docs.git zh-cn
   - git subtree add --prefix=source/en/docs/ git@github.com:EasyWeChat/docs.git en

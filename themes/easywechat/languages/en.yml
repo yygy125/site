@@ -35,6 +35,7 @@ sidebar:
     user_group: User Group
     cache: Cache
     oauth: Oauth
+    messages: Messages
     events: Events
     material: Materials
     card: Card

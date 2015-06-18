@@ -24,7 +24,7 @@ docs:
     qrcode: qecode.html
     short_url: short-url.html
     semantic: semantic.html
-    errors: html
+    errors: errors.html
   customization:
     cache: cache.html
   miscellaneous:

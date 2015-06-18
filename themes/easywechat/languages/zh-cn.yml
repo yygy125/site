@@ -35,6 +35,7 @@ sidebar:
     user_group: 用户组
     cache: 缓存
     oauth: 网页授权
+    messages: 消息
     events: 事件
     material: 素材管理
     card: 卡券

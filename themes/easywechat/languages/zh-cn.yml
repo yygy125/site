@@ -19,6 +19,10 @@ sidebar:
     getting_started: 开始使用
     overview: 概述
     setup: 入门
+    installation: 安装
+    releases: 更新日志
+    roadmap: 路线图
+    accounts: 账号接入
     configuration: 配置
     basic_usage: 基本使用
     miscellaneous: 其他
@@ -30,3 +34,16 @@ sidebar:
     user: 用户
     user_group: 用户组
     cache: 缓存
+    oauth: 网页授权
+    events: 事件
+    material: 素材管理
+    card: 卡券
+    store: 门店
+    staff: 客服
+    js: JSSDK
+    anaylsis: 数据统计与分析
+    notice: 模板消息
+    qrcode: 二维码
+    short_url: 短网址
+    semantic: 语文理解
+    errors: 错误处理

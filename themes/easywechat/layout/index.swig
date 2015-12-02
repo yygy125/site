@@ -7,6 +7,7 @@
     <div id="banner-share">{{ partial('partial/share') }}</div>
   </div>
 </header>
+</div>
 <div id="content-wrap">
   <div class="wrapper">
     <div class="inner">

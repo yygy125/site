@@ -21,14 +21,14 @@ before_install:
   - git config --global user.name "overtrue"
   - git config --global user.email "anzhengchao@gmail.com"
   # Clone the repository
-  - git clone git@github.com:EasyWeChat/easywechat.github.io.git .deploy_git
+  - git clone git@github.com:easywechat/easywechat.github.io.git .deploy_git
 
 
 install:
   # Update docs.
   - git --version
-  - git subtree add --prefix=source/docs/ git@github.com:EasyWeChat/docs.git zh-cn
-  - git subtree add --prefix=source/en/docs/ git@github.com:EasyWeChat/docs.git en
+  - git subtree add --prefix=source/docs/ git@github.com:easywechat/docs.git zh-cn
+  - git subtree add --prefix=source/en/docs/ git@github.com:easywechat/docs.git en
   # Install Hexo
   - npm install hexo-cli -g
   # Install graphicsmagick

@@ -17,6 +17,7 @@ page:
 sidebar:
   docs:
     getting_started: 开始使用
+    tutorial:  小教程
     overview: 概述
     setup: 入门
     installation: 安装

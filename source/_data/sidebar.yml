@@ -2,6 +2,7 @@ docs:
 
   getting_started:
     overview: index.html
+    tutorial: tutorial.html
     installation: installation.html
     configuration: configuration.html
     setup: setup.html

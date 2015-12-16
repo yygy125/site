@@ -15,11 +15,11 @@ before_install:
 
 script:
   # Clone the repository
-  - git clone https://${GH_TOKEN}@github.com/easywechat/easywechat.github.io.git .deploy_git
+  - git clone https://${GH_TOKEN}@github.com/easywechat/easywechat.github.io.git .deploy_git -v
   # Update docs.
   - git --version
-  - git subtree add --prefix=source/docs/ git@github.com:easywechat/docs.git zh-cn
-  - git subtree add --prefix=source/en/docs/ git@github.com:easywechat/docs.git en
+  - git subtree add --prefix=source/docs/ https://${GH_TOKEN}@github.com/easywechat/docs.git zh-cn -v
+  - git subtree add --prefix=source/en/docs/ https://${GH_TOKEN}@github.com/easywechat/docs.git en -v
   # Install Hexo
   - npm install hexo-cli -g
   # Install dependencies

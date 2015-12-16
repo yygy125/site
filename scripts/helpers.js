@@ -6,8 +6,6 @@ var url = require('url');
 var cheerio = require('cheerio');
 var lunr = require('lunr');
 
-var localizedPath = ['home', 'docs', 'api'];
-
 function startsWith(str, start){
   return str.substring(0, start.length) === start;
 }
@@ -65,15 +63,12 @@ hexo.extend.helper.register('doc_sidebar', function(className){
 });
 
 hexo.extend.helper.register('header_menu', function(className){
-  var menu = this.site.data.menu;
   var result = '';
   var self = this;
   var lang = this.page.lang;
-  var isChinese = lang === 'zh-cn';
+  var menu = this.site.data.menu[lang];
 
   _.each(menu, function(path, title){
-    if (!isChinese && ~localizedPath.indexOf(title)) path = lang + path;
-
     result += '<li class="' + className + '-item">';
     result += '<a href="' + self.url_for(path) + '" class="' + className + '-link">' + self.__('menu.' + title) + '</a>';
     result += '</li>';

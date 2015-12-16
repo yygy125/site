@@ -1,3 +1,8 @@
-home: /
-docs: /docs/
-news: /news/
+zh-cn:
+    home: /
+    docs: /docs/zh-cn
+    news: /news/
+en:
+    home: /en
+    docs: /docs/en
+    news: /news/

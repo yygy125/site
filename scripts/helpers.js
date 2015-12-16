@@ -11,8 +11,8 @@ function startsWith(str, start){
   return str.substring(0, start.length) === start;
 }
 
-function replaceLangInPath (path, lang) {
-  if (lang == 'zh-cn') {lang = ''};
+function replaceLangInPath (path, lang, keepCN) {
+  if (!keepCN && lang == 'zh-cn') {lang = ''};
   return path.replace(/(zh-cn|en|\{lang\})?/g, lang).replace('//', '/');
 }
 
@@ -98,7 +98,7 @@ hexo.extend.helper.register('url_for_lang', function(path){
 });
 
 hexo.extend.helper.register('raw_link', function(path){
-  return replaceLangInPath('https://github.com/EasyWeChat/docs/edit/' + path, this.page.lang);
+  return replaceLangInPath('https://github.com/EasyWeChat/docs/edit/' + path, this.page.lang, true);
 });
 
 hexo.extend.helper.register('page_anchor', function(str){

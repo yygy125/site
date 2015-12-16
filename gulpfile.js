@@ -16,8 +16,7 @@ var htmlMinifierOptions = {
 };
 
 var dirs = {
-  public: 'public',
-  screenshots: 'public/build/screenshots'
+  public: 'public'
 };
 
 gulp.task('useref', function(){
@@ -44,49 +43,4 @@ gulp.task('useref', function(){
     .pipe(gulp.dest('public'));
 });
 
-gulp.task('screenshot:rev', function(){
-  return gulp.src('public/themes/screenshots/*.png')
-    .pipe($.rev())
-    .pipe(gulp.dest(dirs.screenshots))
-    .pipe($.rev.manifest())
-    .pipe(gulp.dest(dirs.screenshots));
-});
-
-gulp.task('screenshot:resize', ['screenshot:rev'], function(){
-  var resizeOptions = {
-    width: 400,
-    height: 250,
-    crop: true
-  };
-
-  return gulp.src('public/build/screenshots/*.png')
-    // Append "@2x" to the original images
-    .pipe($.rename({
-      suffix: '@2x'
-    }))
-    // Copy original images
-    .pipe(gulp.dest(dirs.screenshots))
-    // Resize images
-    .pipe($.imageResize(resizeOptions))
-    // Remove "@2x" in filename
-    .pipe($.rename(function(path){
-      path.basename = path.basename.replace('@2x', '');
-      return path;
-    }))
-    // Save resized images
-    .pipe(gulp.dest(dirs.screenshots));
-});
-
-gulp.task('screenshot:revreplace', ['screenshot:rev'], function(){
-  return gulp.src([dirs.screenshots + '/rev-manifest.json', 'public/themes/index.html'])
-    .pipe($.revCollector({
-      replaceReved: true,
-      dirReplacements: {
-        '/themes/screenshots': '/build/screenshots'
-      }
-    }))
-    .pipe(gulp.dest('public/themes'));
-});
-
-gulp.task('screenshot', ['screenshot:rev', 'screenshot:resize', 'screenshot:revreplace']);
 gulp.task('default', ['useref', 'screenshot']);

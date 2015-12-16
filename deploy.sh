@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # easywechat.org builder.
 # @author overtrue <anzhengchao@gmail.com>
 

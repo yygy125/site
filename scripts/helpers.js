@@ -5,9 +5,15 @@ var _ = require('lodash');
 var url = require('url');
 var cheerio = require('cheerio');
 var lunr = require('lunr');
+var localizedPath = ['docs'];
 
 function startsWith(str, start){
   return str.substring(0, start.length) === start;
+}
+
+function replaceLangInPath (path, lang) {
+  if (lang == 'zh-cn') {lang = ''};
+  return path.replace(/(zh-cn|en)?/g, lang).replace('//', '/');
 }
 
 hexo.extend.helper.register('page_nav', function(){
@@ -63,14 +69,14 @@ hexo.extend.helper.register('doc_sidebar', function(className){
 });
 
 hexo.extend.helper.register('header_menu', function(className){
+  var menu = this.site.data.menu;
   var result = '';
   var self = this;
   var lang = this.page.lang;
-  var menu = this.site.data.menu[lang];
 
   _.each(menu, function(path, title){
     result += '<li class="' + className + '-item">';
-    result += '<a href="' + self.url_for(path) + '" class="' + className + '-link">' + self.__('menu.' + title) + '</a>';
+    result += '<a href="' + self.url_for(replaceLangInPath(path, lang)) + '" class="' + className + '-link">' + self.__('menu.' + title) + '</a>';
     result += '</li>';
   });
 
@@ -88,11 +94,7 @@ hexo.extend.helper.register('url_for_lang', function(path){
   var lang = this.page.lang;
   var url = this.url_for(path);
 
-  if (lang !== 'zh-cn' && url[0] === '/') {
-    url = url.replace(/(zh-cn|en)/g, lang);
-  };
-
-  return url;
+  return replaceLangInPath(url, lang);
 });
 
 hexo.extend.helper.register('raw_link', function(path){
@@ -129,16 +131,6 @@ hexo.extend.helper.register('lunr_index', function(data){
   });
 
   return JSON.stringify(index.toJSON());
-});
-
-hexo.extend.helper.register('canonical_path_for_nav', function(){
-  var path = this.page.canonical_path;
-
-  if (startsWith(path, 'docs/') || startsWith(path, 'api/')){
-    return path;
-  } else {
-    return '';
-  }
 });
 
 hexo.extend.helper.register('lang_name', function(lang){

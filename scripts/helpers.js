@@ -98,10 +98,9 @@ hexo.extend.helper.register('url_for_lang', function(path){
 });
 
 hexo.extend.helper.register('raw_link', function(path){
-  if (/docs\/[a-z0-9_]+\.md/.test(path)) {
-    path = path.replace('docs', 'docs/zh-cn');
-  };
-  return 'https://github.com/EasyWeChat/docs/edit/' + path;
+  path = this.page.lang + '/' + path.replace('docs/', '').replace(/(zh-cn|en)\/?/, '');
+
+  return 'https://github.com/EasyWeChat/docs/edit/' + path.replace('//', '/');
 });
 
 hexo.extend.helper.register('page_anchor', function(str){

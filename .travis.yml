@@ -12,6 +12,7 @@ before_install:
   # Set Git config
   - git config --global user.name "overtrue"
   - git config --global user.email "anzhengchao@gmail.com"
+  - git config --global push.default simple
 
 script:
   # Clone the repository

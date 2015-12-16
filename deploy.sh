@@ -1,10 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 # easywechat.org builder.
 # @author overtrue <anzhengchao@gmail.com>
-
-travis login --org --github-token=${GH_TOKEN}
-TOKEN=$(travis token | awk -F 'is' '{print $1}')
-
+#
 body='{
 "request": {
     "message": "Update docs (triggered by easywechat/docs).",

@@ -32,7 +32,7 @@ after_script:
   - hexo generate && gulp
   - cp -r public/* .deploy_git/
   - cd .deploy_git
-  - cp docs/zh-cn/index.html ./
+  - cp docs/zh-cn/index.html ./docs
   - git add -A
   - git commit -am "Auto deploy from Travis-CI."
   - git push --force

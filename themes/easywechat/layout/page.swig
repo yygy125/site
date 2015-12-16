@@ -7,7 +7,7 @@
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
-                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
+                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i> {{ __('page.improve') }}</a>
               </header>
               <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
                 {{ page_anchor(page.content) }}

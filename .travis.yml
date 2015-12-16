@@ -18,8 +18,8 @@ script:
   - git clone https://${GH_TOKEN}@github.com/easywechat/easywechat.github.io.git .deploy_git -v
   # Update docs.
   - git --version
-  - git subtree add --prefix=source/docs/ https://${GH_TOKEN}@github.com/easywechat/docs.git zh-cn -v
-  - git subtree add --prefix=source/en/docs/ https://${GH_TOKEN}@github.com/easywechat/docs.git en -v
+  - git subtree add --prefix=source/docs/ https://${GH_TOKEN}@github.com/easywechat/docs.git zh-cn
+  - git subtree add --prefix=source/en/docs/ https://${GH_TOKEN}@github.com/easywechat/docs.git en
   # Install Hexo
   - npm install hexo-cli -g
   # Install dependencies

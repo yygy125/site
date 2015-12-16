@@ -31,8 +31,8 @@ script:
   - npm install --no-optional
 
 after_script:
-  - cp -r source/docs/zh-cn/* source/docs/
   - hexo generate && gulp
+  - cp -r public/docs/zh-cn/* public/docs/
   - cp -r public/* .deploy_git/
   - cd .deploy_git
   - git add -A

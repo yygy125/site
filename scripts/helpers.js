@@ -88,7 +88,9 @@ hexo.extend.helper.register('url_for_lang', function(path){
   var lang = this.page.lang;
   var url = this.url_for(path);
 
-  if (lang !== 'zh-cn' && url[0] === '/') url = '/' + lang + url;
+  if (lang !== 'zh-cn' && url[0] === '/') {
+    url = url.replace(/(zh-cn|en)/g, lang);
+  };
 
   return url;
 });

@@ -25,8 +25,12 @@ script:
   # Install dependencies
   - npm install --no-optional
 
-script:
-  - hexo generate && gulp && hexo deploy
+after_script:
+  - hexo generate && gulp
+  - cd .deploy_git
+  - git add -A
+  - git commit -am "Auto deploy from Travis-CI."
+  - git push --force
 
 branches:
   only:

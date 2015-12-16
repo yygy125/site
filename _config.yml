@@ -30,12 +30,6 @@ per_page: 0
 ## Themes: http://hexo.io/themes/
 theme: easywechat
 
-# Deployment
-## Docs: http://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: https://${GH_TOKEN}@github.com/easywechat/easywechat.github.io.git
-
 swiftype_key: URYXMYgtQuEhNHNY8d-F
 google_analytics: UA-64156348-1
 github: overtrue/wechat

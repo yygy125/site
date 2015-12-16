@@ -23,8 +23,8 @@ script:
   - git --version
   - git remote add -f docs https://${GH_TOKEN}@github.com/easywechat/docs.git
   - git fetch docs
-  - git subtree add --prefix=source/docs/zh-cn docs --squash
   - git subtree add --prefix=source/docs/en docs/en --squash
+  - git subtree add --prefix=source/docs docs/zh-cn --squash
   # Install Hexo
   - npm install hexo-cli -g
   # Install dependencies

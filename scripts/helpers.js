@@ -98,7 +98,8 @@ hexo.extend.helper.register('url_for_lang', function(path){
 });
 
 hexo.extend.helper.register('raw_link', function(path){
-  return 'https://github.com/easywechat/site/edit/master/source/' + path;
+  var lang = this.page.lang;
+  return 'https://github.com/EasyWeChat/docs/edit/'+lang+'/' + path;
 });
 
 hexo.extend.helper.register('page_anchor', function(str){

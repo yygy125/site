@@ -24,13 +24,14 @@ script:
   - git remote add -f docs https://${GH_TOKEN}@github.com/easywechat/docs.git
   - git fetch docs
   - git subtree add --prefix=source/docs/en docs/en --squash
-  - git subtree add --prefix=source/docs docs/zh-cn --squash
+  - git subtree add --prefix=source/docs/zh-cn docs/zh-cn --squash
   # Install Hexo
   - npm install hexo-cli -g
   # Install dependencies
   - npm install --no-optional
 
 after_script:
+  - cp -r source/docs/zh-cn/* source/docs/
   - hexo generate && gulp
   - cp -r public/* .deploy_git/
   - cd .deploy_git

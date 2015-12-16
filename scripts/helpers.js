@@ -98,7 +98,8 @@ hexo.extend.helper.register('url_for_lang', function(path){
 });
 
 hexo.extend.helper.register('raw_link', function(path){
-  path = this.page.lang + '/' + path.replace('docs/', '').replace(/(zh-cn|en)\/?/, '');
+  console.log('raw'+path);
+  path = this.page.lang + '/' + path.replace(/docs\/((zh\-cn|en)\/)?/, '');
 
   return 'https://github.com/EasyWeChat/docs/edit/' + path.replace('//', '/');
 });

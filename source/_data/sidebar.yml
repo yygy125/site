@@ -2,10 +2,9 @@ docs:
 
   getting_started:
     overview: index.html
-    tutorial: tutorial.html
     installation: installation.html
+    tutorial: tutorial.html
     configuration: configuration.html
-    setup: setup.html
   basic_usage:
     server: server.html
     messages: messages.html

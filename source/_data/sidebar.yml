@@ -8,19 +8,18 @@ docs:
   basic_usage:
     server: server.html
     messages: messages.html
-    menu: menu.html
-    accounts: accounts.html
+    events: events.html
     user: user.html
     user_group: user-group.html
     oauth: oauth.html
-    events: events.html
     material: material.html
+    menu: menu.html
+    js: js.html
+    notice: notice.html
     card: card.html
     store: store.html
     staff: staff.html
-    js: js.html
     anaylsis: anaylsis.html
-    notice: notice.html
     qrcode: qecode.html
     short_url: short-url.html
     semantic: semantic.html

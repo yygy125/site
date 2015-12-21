@@ -14,7 +14,7 @@ page:
   prev: 上一页
   next: 下一页
   last_updated: 上次更新：%s
-  donate: 我要打赏！
+  donate: 我要打赏支持
 
 sidebar:
   docs:

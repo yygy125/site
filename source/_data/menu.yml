@@ -1,3 +1,4 @@
 home: /{lang}
 docs: /docs/{lang}
 news: /news/
+donate: /donate.html

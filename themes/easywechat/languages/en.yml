@@ -2,6 +2,7 @@ menu:
   home: Home
   docs: Docs
   news: News
+  donate: Donate
 
 index:
   get_started: Get started
@@ -13,6 +14,7 @@ page:
   prev: Prev
   next: Next
   last_updated: "Last updated: %s"
+  donate: Donate
 
 sidebar:
   docs:

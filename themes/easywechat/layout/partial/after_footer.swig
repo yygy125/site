@@ -12,6 +12,7 @@
 {{ js('js/plugins') }}
 <!-- endbuild -->
 {% endif %}
+{{ js('js/tab.js') }}
 <!-- Swiftype -->
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){

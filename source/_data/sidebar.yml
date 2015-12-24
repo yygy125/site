@@ -15,6 +15,7 @@ docs:
     material: material.html
     menu: menu.html
     js: js.html
+    payment: payment.html
     notice: notice.html
     card: card.html
     store: store.html

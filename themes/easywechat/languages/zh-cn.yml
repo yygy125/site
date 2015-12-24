@@ -42,7 +42,8 @@ sidebar:
     events: 事件
     material: 素材管理
     card: 卡券
-    store: 门店
+    store: 小店
+    poi: 门店
     staff: 客服
     js: JSSDK
     anaylsis: 数据统计与分析

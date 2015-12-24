@@ -18,6 +18,7 @@ docs:
     notice: notice.html
     card: card.html
     store: store.html
+    poi: poi.html
     staff: staff.html
     anaylsis: anaylsis.html
     qrcode: qecode.html

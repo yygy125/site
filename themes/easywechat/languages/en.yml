@@ -43,6 +43,7 @@ sidebar:
     material: Materials
     card: Card
     store: Store
+    poi: POI
     staff: Staff
     js: Javascript
     anaylsis: Anaylsis

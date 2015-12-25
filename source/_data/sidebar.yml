@@ -22,11 +22,11 @@ docs:
     poi: poi.html
     staff: staff.html
     anaylsis: anaylsis.html
-    qrcode: qecode.html
+    qrcode: qrcode.html
     short_url: short-url.html
     semantic: semantic.html
-    errors: errors.html
   customization:
+    errors: errors.html
     cache: cache.html
   miscellaneous:
     troubleshooting: troubleshooting.html

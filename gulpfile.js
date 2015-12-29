@@ -43,4 +43,4 @@ gulp.task('useref', function(){
     .pipe(gulp.dest('public'));
 });
 
-gulp.task('default', ['useref', 'screenshot']);
+gulp.task('default', ['useref']);

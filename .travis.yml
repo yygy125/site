@@ -39,7 +39,6 @@ script:
   - git fetch docs
   - git subtree add --prefix=source/docs/en docs/en --squash
   - git subtree add --prefix=source/docs/zh-cn docs/zh-cn --squash
-  - npm run build
   # Install Hexo
   - npm install hexo-cli -g
   # Install dependencies

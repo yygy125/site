@@ -20,6 +20,7 @@
     "lunr": "^0.6.0"
   },
   "devDependencies": {
+    "hexo-cli":"*",
     "cssnano": "^3.3.2",
     "gulp": "^3.9.0",
     "gulp-if": "^2.0.0",

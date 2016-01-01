@@ -27,6 +27,7 @@ sidebar:
     roadmap: Roadmap
     accounts: accounts
     payment: Payment
+    broadcast: Broadcast
     configuration: Configuration
     basic_usage: Basic Usage
     miscellaneous: Miscellaneous

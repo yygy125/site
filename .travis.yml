@@ -1,14 +1,28 @@
 language: node_js
 
 node_js:
-  - "4.1"
+  - "4"
+
 cache:
-  - apt
-  - bundler
+  apt: true
+  directories:
+    - node_modules
+
 addons:
   apt:
     packages:
       - graphicsmagick
+
+env:
+  - CXX=g++-4.8
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+  ssh_known_hosts: github.com
 
 before_install:
   # Set Git config
@@ -25,6 +39,7 @@ script:
   - git fetch docs
   - git subtree add --prefix=source/docs/en docs/en --squash
   - git subtree add --prefix=source/docs/zh-cn docs/zh-cn --squash
+  - npm run build
   # Install Hexo
   - npm install hexo-cli -g
   # Install dependencies

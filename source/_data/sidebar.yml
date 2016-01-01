@@ -16,6 +16,7 @@ docs:
     menu: menu.html
     js: js.html
     payment: payment.html
+    broadcast: broadcast.html
     notice: notice.html
     card: card.html
     store: store.html

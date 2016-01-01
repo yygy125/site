@@ -2,18 +2,7 @@
 
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
-var autoprefixer = require('autoprefixer-core');
-
-var htmlMinifierOptions = {
-  removeComments: true,
-  collapseWhitespace: true,
-  collapseBooleanAttributes: true,
-  removeScriptTypeAttributes: true,
-  removeStyleLinkTypeAttributes: true,
-  removeOptionalTags: true,
-  minifyJS: true,
-  minifyCSS: true
-};
+var cssnano = require('cssnano');
 
 var dirs = {
   public: 'public'
@@ -26,12 +15,10 @@ gulp.task('useref', function(){
 
   return gulp.src('public/**/*.html')
     .pipe(assets)
+    .pipe($.uniqueFiles())
     .pipe($.if('*.css', $.postcss([
-      autoprefixer({
-        browsers: ['last 2 versions', 'Firefox ESR']
-      })
-    ])))
-    .pipe($.if('*.css', $.minifyCss()))
+      cssnano()
+     ])))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.rev())
     .pipe(assets.restore())
@@ -39,7 +26,6 @@ gulp.task('useref', function(){
     .pipe($.revReplace({
       prefix: '/'
     }))
-    .pipe($.if('*.html', $.htmlMinifier(htmlMinifierOptions)))
     .pipe(gulp.dest('public'));
 });
 

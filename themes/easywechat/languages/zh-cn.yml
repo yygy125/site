@@ -27,6 +27,7 @@ sidebar:
     roadmap: 路线图
     accounts: 账号接入
     payment: 支付
+    broadcast: 群发消息
     configuration: 配置
     basic_usage: 基本使用
     miscellaneous: 其他

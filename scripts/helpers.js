@@ -13,7 +13,7 @@ function startsWith(str, start){
 
 function replaceLangInPath (path, lang, keepCN) {
   if (!keepCN && lang == 'zh-cn') {lang = ''};
-  return path.replace(/(zh-cn|en|\{lang\})?/g, lang).replace('//', '/');
+  return path.replace(/(zh-cn|en|\{lang\})/g, lang).replace('//', '/');
 }
 
 hexo.extend.helper.register('page_nav', function(){

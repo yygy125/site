@@ -1,6 +1,7 @@
 menu:
   home: Home
   docs: Docs
+  2docs: Docs(2.x)
   news: News
   donate: Donate
 

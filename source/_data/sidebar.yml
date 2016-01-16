@@ -9,6 +9,8 @@ docs:
     server: server.html
     messages: messages.html
     events: events.html
+    broadcast: broadcast.html
+    notice: notice.html
     user: user.html
     user_group: user-group.html
     oauth: oauth.html
@@ -16,8 +18,7 @@ docs:
     menu: menu.html
     js: js.html
     payment: payment.html
-    broadcast: broadcast.html
-    notice: notice.html
+    lucky_money: lucky-money.html
     card: card.html
     store: store.html
     poi: poi.html

@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Easy We Chat
-subtitle:
+title: Jan Huang
+subtitle: 
 description:
-author: overtrue
+author: janhuang
 language: zh-cn
 timezone: PRC
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://easywechat.org
+url: http://www.janhuagn.me
 root: /
 
 permalink: news/:year/:month/:day/:title/
@@ -32,6 +32,6 @@ theme: easywechat
 
 swiftype_key: URYXMYgtQuEhNHNY8d-F
 google_analytics: UA-64156348-1
-github: overtrue/wechat
-twitter: anzhengchao
-weibo: 44294631
+github: janhuang/fastd
+twitter: 
+weibo: janhuang

@@ -9,3 +9,4 @@ public/
 .travis/ssh_key.pub
 source/docs/*
 source/en/docs/*
+*.orig

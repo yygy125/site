@@ -33,12 +33,6 @@ before_install:
 script:
   # Clone the repository
   - git clone https://${GH_TOKEN}@github.com/JanHuang/janhuang.github.io.git .deploy_git -v
-  # Update docs.
-  # - git --version
-  # - git remote add -f docs https://${GH_TOKEN}@github.com/easywechat/docs.git
-  # - git fetch docs
-  # - git subtree add --prefix=source/docs/en docs/en --squash
-  # - git subtree add --prefix=source/docs/zh-cn docs/zh-cn --squash
   # Install dependencies
   - npm install --no-optional
 

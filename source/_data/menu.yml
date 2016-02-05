@@ -1,5 +1,5 @@
-home: /{lang}
-docs: /docs/{lang}
-2docs: https://github.com/overtrue/wechat/wiki
+docs: /docs/
+api: /api/
 news: /news/
-donate: /donate.html
+plugins: /plugins/
+themes: /themes/

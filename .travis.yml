@@ -1,4 +1,5 @@
 language: node_js
+sudo: false
 node_js:
 - '4'
 cache:
@@ -15,21 +16,21 @@ addons:
 env:
 - CXX=g++-4.8
 before_install:
-- git config --global user.name "janhuang"
-- git config --global user.email "384099566@qq.com"
-- git config --global push.default simple
+  - git config --global user.name "janhuang"
+  - git config --global user.email "384099566@qq.com"
+  - git config --global push.default simple
 script:
-- echo ${GH_TOKEN}
-- git clone https://${GH_TOKEN}@github.com/JanHuang/janhuang.github.io.git .deploy_git
-  -v
-- npm install --no-optional
+  - git clone https://${token}@github.com/JanHuang/janhuang.github.io.git .deploy_git
+    -v
+  - git --version
+  - npm install --no-optional
 after_script:
-- hexo generate && gulp
-- cp -r public/* .deploy_git/
-- cd .deploy_git
-- git add -A
-- git commit -am "Auto deploy from Travis-CI."
-- git push --force
+  - hexo generate && gulp
+  - cp -r public/* .deploy_git/
+  - cd .deploy_git
+  - git add -A
+  - git commit -am "Auto deploy from Travis-CI."
+  - git push --force
 branches:
   only:
   - master

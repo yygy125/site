@@ -20,8 +20,7 @@ before_install:
   - git config --global user.email "384099566@qq.com"
   - git config --global push.default simple
 script:
-  - git clone https://${token}@github.com/JanHuang/janhuang.github.io.git .deploy_git
-    -v
+  - git clone https://${token}@github.com/JanHuang/janhuang.github.io.git .deploy_git -v
   - git --version
   - npm install --no-optional
 after_script:

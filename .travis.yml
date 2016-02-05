@@ -1,49 +1,37 @@
 language: node_js
-
 node_js:
-  - "4"
-
+- '4'
 cache:
   apt: true
   directories:
-    - node_modules
-
-addons:
-  apt:
-    packages:
-      - graphicsmagick
-
-env:
-  - CXX=g++-4.8
-
+  - node_modules
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
+    - ubuntu-toolchain-r-test
     packages:
-      - g++-4.8
+    - g++-4.8
   ssh_known_hosts: github.com
-
+env:
+- CXX=g++-4.8
 before_install:
-  # Set Git config
-  - git config --global user.name "janhuang"
-  - git config --global user.email "384099566@qq.com"
-  - git config --global push.default simple
-
+- openssl aes-256-cbc -K $encrypted_525de71d93eb_key -iv $encrypted_525de71d93eb_iv
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+- git config --global user.name "janhuang"
+- git config --global user.email "384099566@qq.com"
+- git config --global push.default simple
 script:
-  # Clone the repository
-  - git clone https://${GH_TOKEN}@github.com/JanHuang/janhuang.github.io.git .deploy_git -v
-  # Install dependencies
-  - npm install --no-optional
-
+- echo ${GH_TOKEN}
+- git clone https://${GH_TOKEN}@github.com/JanHuang/janhuang.github.io.git .deploy_git
+  -v
+- npm install --no-optional
 after_script:
-  - hexo generate && gulp
-  - cp -r public/* .deploy_git/
-  - cd .deploy_git
-  - git add -A
-  - git commit -am "Auto deploy from Travis-CI."
-  - git push --force
-
+- hexo generate && gulp
+- cp -r public/* .deploy_git/
+- cd .deploy_git
+- git add -A
+- git commit -am "Auto deploy from Travis-CI."
+- git push --force
 branches:
   only:
-    - master
+  - master

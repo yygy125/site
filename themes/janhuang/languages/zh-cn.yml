@@ -18,23 +18,42 @@ page:
 
 sidebar:
   fastd:
-    getting_started: 开始使用
-    overview: 概述
-    install: 安装
-    introduce: 目录
-    basic_usage: 基础操作
-    develop: 开发规范
-    configuration: 配置
-    route: 路由
-    event: 事件
-    di: 依赖注入
-    view: 视图(Twig)操作
-    database: 数据库操作
-    database_curd: 增删改查
-    database_query: 数据库查询
-    database_page: 查询分页
-    services: Services & 辅助类
-    summary: 总结
+    1x:
+      getting_started: 开始使用
+      overview: 概述
+      install: 安装
+      introduce: 目录
+      basic_usage: 基础操作
+      develop: 开发规范
+      configuration: 配置
+      route: 路由
+      event: 事件
+      di: 依赖注入
+      view: 视图(Twig)操作
+      database: 数据库操作
+      database_curd: 增删改查
+      database_query: 数据库查询
+      database_page: 查询分页
+      services: Services & 辅助类
+      summary: 总结
+    2x:
+      getting_started: 开始使用
+      overview: 概述
+      install: 安装
+      introduce: 目录
+      basic_usage: 基础操作
+      develop: 开发规范
+      configuration: 配置
+      route: 路由
+      event: 事件
+      di: 依赖注入
+      view: 视图(Twig)操作
+      database: 数据库操作
+      database_curd: 增删改查
+      database_query: 数据库查询
+      database_page: 查询分页
+      services: Services & 辅助类
+      summary: 总结
 
   components:
     getting_started: 开始使用

@@ -1,23 +1,27 @@
 fastd:
-  getting_started:
-    overview: index.html
-    install: install.html
-    introduce: introduce.html
-  basic_usage:
-    develop: develop.html
-    configuration: configuration.html
-    route: route.html
-    event: http-event.html
-    di: dependency-injection.html
-    view: view.html
-  database:
-    database_curd: db-curd.html
-    database_query: db-query.html
-    database_page: db-page.html
-  services:
-    services: services.html
-  summary:
-    summary: summary.html
+  1x:
+    getting_started:
+      overview: index.html
+      install: install.html
+      introduce: introduce.html
+    basic_usage:
+      develop: develop.html
+      configuration: configuration.html
+      route: route.html
+      event: http-event.html
+      di: dependency-injection.html
+      view: view.html
+    database:
+      database_curd: db-curd.html
+      database_query: db-query.html
+      database_page: db-page.html
+    services:
+      services: services.html
+    summary:
+      summary: summary.html
+  2x:
+    getting_started:
+      overview: index.html
 
 components:
   getting_started:

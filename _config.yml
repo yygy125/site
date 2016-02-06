@@ -1,13 +1,13 @@
 title: Jan Huang
 subtitle: "Developer & Bboy."
-description: "Open sourece developer."
+description: "I am just a developer."
 author: Jan Huang
 language: zh-cn
 timezone: PRC
 url: https://www.janhuang.me
 root: /
 permalink: news/:year/:month/:day/:title/
-archive_dir: news
+archive_dir: blogs
 code_dir: downloads/code
 new_post_name: :year-:month-:day-:title.md # File name of new posts
 post_asset_folder: true
@@ -34,5 +34,5 @@ algolia:
   zh-cn:
     api_key: cdea7d4e47d84f6145b77e7f68689f35
     index_name: hexo_zh-cn
-twitter: 
+# twitter: 
 github: janhuang/site

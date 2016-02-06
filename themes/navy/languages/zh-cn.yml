@@ -1,13 +1,11 @@
 menu:
-  docs: 文档
-  api: API
-  news: 新闻
-  plugins: 插件
-  themes: 主题
-  search: 搜索
+  fastd: FastD
+  components: 组件
+  blogs: 博客
+  donate: 智商充值(打赏)
 
 index:
-  get_started: 开始使用
+  get_startedget_started:: Get Started
 
 page:
   contents: 目录
@@ -18,7 +16,7 @@ page:
   last_updated: 上次更新：%s
 
 sidebar:
-  docs:
+  fastd:
     getting_started: 开始使用
     overview: 概述
     setup: 建站
@@ -46,7 +44,7 @@ sidebar:
     miscellaneous: 其他
     troubleshooting: 问题解答
     contributing: 贡献
-  api:
+  components:
     core: 核心
     overview: 概述
     events: 事件

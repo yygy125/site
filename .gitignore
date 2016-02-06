@@ -10,3 +10,4 @@ public/
 source/docs/*
 source/en/docs/*
 *.orig
+.idea

@@ -2,7 +2,7 @@
   <div class="inner">
     <h2 id="banner-title">{{ page.subtitle }}</h2>
     <div id="banner-start">
-      <span id="banner-start-command">composer install "fastd/fastd:2.0.x-dev" -vvv</span><a id="banner-start-link" href="fastd/"><i class="fa fa-arrow-right"></i></a>
+      <span id="banner-start-command">composer create-project [path] "fastd/fastd:2.0.x-dev" -vvv</span><a id="banner-start-link" href="fastd/"><i class="fa fa-arrow-right"></i></a>
     </div>
     {#<div id="banner-share">{{ partial('partial/share') }}</div>#}
   </div>

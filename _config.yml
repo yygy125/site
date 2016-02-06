@@ -22,7 +22,8 @@ deploy:
   repo: git@github.com:JanHuang/janhuang.github.io.git
 
 disqus_shortname: 
-google_analytics: 
+google_analytics:
+baidu_analytics: 05d3cdd8f4d38f1a7779f39b57cc4d34
 fb_admins: 100000247608790
 algolia:
   en:

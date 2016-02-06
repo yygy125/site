@@ -11,3 +11,4 @@ source/docs/*
 source/en/docs/*
 *.orig
 .idea
+*.log

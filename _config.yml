@@ -6,24 +6,23 @@ language: zh-cn
 timezone: PRC
 url: https://www.janhuang.me
 root: /
-permalink: news/:year/:month/:day/:title/
+permalink: blogs/:title.html
 archive_dir: blogs
 code_dir: downloads/code
-new_post_name: :year-:month-:day-:title.md # File name of new posts
+new_post_name: :year/:i_month/:i_day/:title/index.md # File name of new posts
 post_asset_folder: true
 highlight:
   enable: true
   line_number: false
 per_page: 0
 
-theme: navy
+theme: janhuang
 deploy:
   type: git
   repo: git@github.com:JanHuang/janhuang.github.io.git
 
 disqus_shortname: 
 google_analytics:
-baidu_analytics: 05d3cdd8f4d38f1a7779f39b57cc4d34
 fb_admins: 100000247608790
 algolia:
   en:

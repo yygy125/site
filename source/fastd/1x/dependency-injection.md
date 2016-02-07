@@ -1,12 +1,13 @@
 title: 依赖注入
 ---
-事件处理方法对象自动注入
+依赖注入也算是本框架的一个亮点之作, 所以对象都会注册到一个 "容器" 对象里面, 所有的对象获取都通过该 "容器" 获取.
 
-还是拿回刚才的 `Welcome` 模块
+一方面减少了对象重复 new, 另一方面也可以很好地管理各种对象.
 
-注入 `FastD\Protocol\Http\Request` 对象
+对象实例实现通过 `composer` 来实现. 具体请看: [Container]()
 
-<pre class="md-fences mock-cm" style="display:block;position:relative"><?php
+```php
+<?php
 
 namespace Welcome\Events;
 
@@ -14,16 +15,43 @@ use FastD\Protocol\Http\Request;
 
 class Welcome
 {
-	public function welcomeAction(Request $request)
+    /**
+     * 这里注入一个对象, 多个对象就添加多个参数.
+     */
+    public function welcomeAction(Request $request)
     {
     	return $request->getPathInfo();
     }
-}</pre>
+}
+```
 
-**注意这个自动注入默认只支持路由字符串事件绑定**
+> 注入的对象需要排在动态参数的最前面
 
-在绑定的事件处理方法中就可以通过这种方式进行注入，方便快捷，而且使程序更加优雅。
+如果这里配置动态路由, 在 `action` 中添加参数即可.
 
-其他注入一样的道理，如果自定义对象，也可以通过这种注入方法注入。非常简单
+```php
+<?php
 
-如果你有更好的想法，欢迎和我交流
+namespace Welcome\Events;
+
+use FastD\Protocol\Http\Request;
+
+class Welcome
+{
+    /**
+     * 这里注入一个对象, 多个对象就添加多个参数.
+     */
+    public function welcomeAction(Request $request, $name)
+    {
+    	return $name;
+    }
+}
+```
+
+路由对应到
+
+```php
+Routes::get('/{name}', 'namespace:class@action');
+```
+
+具体路由定义请看: [路由]()

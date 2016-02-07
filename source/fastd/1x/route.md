@@ -62,7 +62,7 @@ Routes::get('/{name}', 'namespace:class@action')
 
 ```php
 Routes::group('/demo', function() {
-	Routes::get('/', '事件绑定');
+    Routes::get('/', '事件绑定');
 });
 ```
 
@@ -72,8 +72,8 @@ Routes::group('/demo', function() {
 
 ```php
 Routes::group('/demo', function () {
-	Routes::group('/v1', function () {
-    	Routes::get('/', '事件绑定');
+    Routes::group('/v1', function () {
+        Routes::get('/', '事件绑定');
     });
 });
 ```

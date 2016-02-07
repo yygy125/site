@@ -1,7 +1,7 @@
 title: 视图操作
 ---
 
-> 若要渲染模板，处理事件需要继承 `Kernel\Events\TemplateEvent`
+> 若要渲染模板，处理事件需要继承 `FastD\Framework\Events\TemplateEvent`
 
 ```php
 <?php

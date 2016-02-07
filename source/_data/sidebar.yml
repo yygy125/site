@@ -12,6 +12,7 @@ fastd:
       di: dependency-injection.html
       view: view.html
     database:
+      database_configuration: db-configuration.html
       database_curd: db-curd.html
       database_query: db-query.html
       database_page: db-page.html

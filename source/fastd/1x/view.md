@@ -1,38 +1,32 @@
 title: 视图操作
 ---
-## 渲染
 
-若要渲染模板，处理事件需要继承 `Kernel\Events\TemplateEvent`
+> 若要渲染模板，处理事件需要继承 `Kernel\Events\TemplateEvent`
 
-<pre class="md-fences mock-cm" style="display:block;position:relative">render(template, array parameters)</pre>
+```php
+<?php
 
-*   `template`
+namespace Welcome\Events;
 
-    需要渲染的模板路径
+use FastD\Protocol\Http\Request;
+use FastD\Framework\Events\TemplateEvent;
 
-*   `array parameters`
+class Welcome extends TemplateEvent
+{
+    /**
+     * 这里注入一个对象, 多个对象就添加多个参数.
+     */
+    public function welcomeAction(Request $request)
+    {
+    	return $this->render('path/to/name.twig');
+    }
+}
+```
 
-给模板分配变量， `key => value`
+> 模板引擎在 framework 1.5 之前需要填写完整模板路径. 1.5 版本之后可以填写该 Bundle 下的 views 相对路径
 
-## 赋值
+赋值需要在 `render` 中的第二个参数, 以数组形式传入:
 
-目前模板仅支持 `twig` 模板引擎驱动，默认地址是:
-
-<pre class="md-fences mock-cm" style="display:block;position:relative">[
-	app/views/
-    Moduble/Resources/views
-]</pre>
-
-默认模板会在以上目录寻找。
-
-详细参考地址: **[Twig](http://twig.sensiolabs.org/documentation)**
-
-为甚么选择 `twig`
-
-*   灵活
-
-*   强大
-*   快
-*   好用
-
-`twig` 可以在生产服务器添加到 `php extension中`
+```php
+render($template, array $parameters = []);
+```

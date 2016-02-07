@@ -1,8 +1,7 @@
 title: 目录
 ---
-首先来了解一下框架的目录结构:
+## 目录结构
 
-进入框架目录展开怎会看到如下结构:
 ```php
 app
     -|-config  环境配置文件
@@ -12,10 +11,9 @@ app
      |-tests 测试目录
      |-views
          -|-errors 自定义错误信息视图
-        -|-welcome 欢迎页视图
+         -|-welcome 欢迎页视图
      |-Application.php 应用初始化文件
-     |-console  命令行控制文件
-     |-routes.php 总路由配置文件
+     |-console  命令行控制文件 // 2.0 版本将 console 迁移到 bin 目录
 
 bin  命令行存放目录
 public 根目录
@@ -31,22 +29,17 @@ vendor 安装依赖包目录
 
 目前模块中仅需包含简单几个目录，目前我拿 `Welcome` 默认模块进行目录结构解析:
 
-    Welcome
-        -|-Commands   模块自定义命令行目录
-         |-Events     模块路由映射事件目录
-         |-Resources  模块配置文件目录及视图目录
-         |-Repository 模块数据库文件
-         |-Boot.php   模块引导文件，每个模块都需要将引导文件注册到Application::registerBundle 方法中
-
-首先解析的是视图的目录位置。
+```
+Welcome
+    -|-Commands   模块自定义命令行目录
+     |-Events     模块路由映射事件目录
+     |-Resources  模块配置文件目录及视图目录
+     |-Repository 模块数据库文件
+     |-WelcomeBundle.php   模块引导文件，每个模块都需要将引导文件注册到 Application::registerBundle 方法中
+```
 
 ## 模块视图 (Views)
 
-视图的目录位置处于 `[app/views, Mobule/path/Resources/views]`
+视图的目录位置处于 `[app/views, Bundle/Resources/views]`
 
 因此，如果想要引用和渲染模块当中的视图文件，则需要将模块的具体视图文件直接写在渲染的方法上。
-
-----
-
-如果你有更好的目录结构建议，我希望你可以分享给大家。如果你觉得框架目录结构有问题，可以提出你的想法，我会在短时间内回复。
-

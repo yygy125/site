@@ -32,7 +32,8 @@ sidebar:
       view: 视图(Twig)操作
       database: 数据库操作
       database_configuration: 数据库配置
-      database_curd: 增删改查
+      database_repository: Repository
+      database_curd: 数据库驱动
       database_query: 数据库查询
       database_page: 查询分页
       services: Services & 辅助类

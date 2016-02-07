@@ -189,6 +189,62 @@ class Index extends BaseEvent
 
 > 插入与更新在 2.0 版本中均使用 `save` 方法代替
 
+##### 自定义查询
+
+```php
+createQuery($sql): FastD\Database\Driver
+```
+
+示例:
+
+```php
+<?php
+
+namespace Welcome\Events;
+
+use FastD\Framework\Events\BaseEvent;
+
+/**
+ * Class Index
+ *
+ * @package Welcome\Events
+ */
+class Index extends BaseEvent
+{
+    public function welcomeAction(Request $request)
+    {
+        try {
+            $demoRepository = $this->getConnection('read')->getRepository('Welcome:Repository:Demo');
+        } catch (\Exception $e) {
+            return 'fail';
+        }
+
+        $demoRepository
+            ->createQuery('select * from table where id = :id')
+            ->setParameter(['id' => 1])
+            ->getQuery()
+            ->getOne()
+        ;
+        // update table set `name` = 'jan' where `id` = 1;
+
+        return 'ok';
+    }
+}
+```
+
+通过 `createQuery` 创建一个预查询语句, 其实现与 `PDO` 一样, 内部就是调用 `PDO` 的预处理.
+
+通过 `getQuery` 执行绑定.
+
+绑定后可以根据内容获取不同的返回值:
+
+```php
+getQuery()->getOne();
+getQuery()->getAll();
+getQuery()->getLastId();
+getQuery()->getAffectedRows();
+```
+
 `Repository` 内部业务实现均使用 `Connection` 数据库驱动实现, 具体请看 [curd]()
 
 ##### 获取 `Repository` 数据库链接

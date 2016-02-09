@@ -2,4 +2,5 @@ fastd: /fastd/1x/
 fastd2x: /fastd/2x/
 components: /components/
 blogs: /blogs/
-donate: /donate/
+#donate: /donate.html
+#about: /about.html

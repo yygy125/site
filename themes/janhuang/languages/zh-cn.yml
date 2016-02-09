@@ -4,6 +4,7 @@ menu:
   components: 组件
   blogs: 博客
   donate: 智商充值
+  about: 关于
 
 index:
   get_started: Get Started

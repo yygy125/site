@@ -73,4 +73,17 @@ sidebar:
 
   components:
     getting_started: 开始使用
-    routing: 路由
+    framework: 框架核心
+    routing: 路由组件
+    http: Http组件
+    container: 容器组件
+    config: 配置组件
+    console: 命令行组件
+    database: 数据库组件
+    finder: Finder组件
+    logger: 日志组件
+    template: 模板引擎组件
+    swoole: Swoole服务组件
+    storage: 高速存储组件
+    debug: 调试组件
+    annotation: 注释组件

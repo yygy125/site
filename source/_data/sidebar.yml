@@ -23,6 +23,36 @@ fastd:
   2x:
     getting_started:
       overview: index.html
+      install: install.html
+      introduce: introduce.html
+      configuration: configuration.html
+      develop: develop.html
+    route:
+      route: route.html
+      annotation_route: annotation_route.html
+      route_config: route_config.html
+    controller:
+      basic_controller: controller.html
+      di_controller: di_controller.html
+    view_twig:
+      view_render: view.html
+      view_ext: view_ext.html
+    database:
+      database_configuration: db-configuration.html
+      database_orm: db-orm.html
+      database_page: db-page.html
+    command:
+      preset_command: preset_command.thml
+      custom_command: custom_command.html
+    services:
+      services: services.html
+      di_services: di_services.html
+    advanced:
+      http_server: http_server.html
+      deploy: deploy.html
+    summary:
+      summary: summary.html
+
 
 components:
   getting_started:

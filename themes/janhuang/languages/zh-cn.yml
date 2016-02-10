@@ -46,15 +46,29 @@ sidebar:
       basic_usage: 基础操作
       develop: 开发规范
       configuration: 配置
-      route: 路由
-      event: 事件
-      di: 依赖注入
-      view: 视图(Twig)操作
+      route: 基础路由
+      annotation_route: 注释路由
+      route_config: 路由参数配置
+      controller: 控制器
+      basic_controller: 基础控制器
+      di_controller: 控制器参数注入
+      view_twig: 视图(Twig)
+      view_render: 视图渲染
+      view_ext: 视图扩展
       database: 数据库操作
-      database_curd: 增删改查
-      database_query: 数据库查询
+      database_orm: 对象关系映射(ORM)
+      database_configuration: 数据库配置
+      database_repository: Repository
+      database_curd: 数据库驱动
       database_page: 查询分页
-      services: Services & 辅助类
+      services: Services 基础
+      di_services: Services 依赖注入
+      command: 命令行
+      preset_command: 预设命令行
+      custom_command: 自定义命令行
+      advanced: 高级
+      http_server: Http 服务器
+      deploy: 部署
       summary: 总结
 
   components:

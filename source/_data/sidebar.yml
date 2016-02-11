@@ -56,18 +56,32 @@ fastd:
 
 
 components:
-  getting_started:
-    framework: framework.html
-    routing: routing.html
-    http: http.html
-    container: container.html
-    config: config.html
-    console: console.html
-    database: database.html
-    finder: finder.html
-    logger: logger.html
-    template: template.html
-    swoole: swoole.html
-    storage: storage.html
-    debug: debug.html
-    annotation: annotation.html
+  framework:
+    basic_usage: basic_framework.html
+  routing:
+    basic_usage: basic_routing.html
+  http:
+    basic_usage: basic_http.html
+    http_request_api: http_request_api.html
+  container:
+    basic_usage: basic_container.html
+  config:
+    basic_usage: basic_config.html
+  console:
+    basic_usage: basic_console.html
+  database:
+    basic_usage: basic_database.html
+  finder:
+    basic_usage: basic_finder.html
+  logger:
+    basic_usage: basic_logger.html
+  template:
+    basic_usage: basic_template.html
+  swoole:
+    basic_usage: basic_swoole.html
+  storage:
+    basic_usage: basic_storage.html
+  debug:
+    basic_usage: basic_debug.html
+  annotation:
+    basic_usage: basic_annotation.html

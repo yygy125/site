@@ -73,10 +73,11 @@ sidebar:
       summary: 总结
 
   components:
-    getting_started: 开始使用
+    basic_usage: 基础使用
     framework: 框架核心
     routing: 路由组件
     http: Http组件
+    http_request_api: FastD\Http\Request
     container: 容器组件
     config: 配置组件
     console: 命令行组件

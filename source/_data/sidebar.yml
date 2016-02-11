@@ -50,6 +50,7 @@ fastd:
     advanced:
       http_server: http_server.html
       deploy: deploy.html
+      testing: testing.html
     summary:
       summary: summary.html
 

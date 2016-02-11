@@ -69,6 +69,7 @@ sidebar:
       advanced: 高级
       http_server: Http 服务器
       deploy: 部署
+      testing: 测试
       summary: 总结
 
   components:

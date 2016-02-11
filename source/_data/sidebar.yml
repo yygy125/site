@@ -26,9 +26,8 @@ fastd:
       install: install.html
       introduce: introduce.html
       configuration: configuration.html
-      develop: develop.html
     route:
-      route: route.html
+      basic_route: basic_route.html
       annotation_route: annotation_route.html
       route_config: route_config.html
     controller:

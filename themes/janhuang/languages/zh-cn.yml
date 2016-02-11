@@ -44,9 +44,9 @@ sidebar:
       install: 安装
       introduce: 目录
       basic_usage: 基础操作
-      develop: 开发规范
       configuration: 配置
-      route: 基础路由
+      route: 路由
+      basic_route: 基础路由
       annotation_route: 注释路由
       route_config: 路由参数配置
       controller: 控制器

@@ -5,6 +5,7 @@ menu:
   blogs: 博客
   donate: 智商充值
   about: 关于
+  share: 分享
 
 index:
   get_started: Get Started
@@ -48,7 +49,6 @@ sidebar:
       route: 路由
       basic_route: 基础路由
       annotation_route: 注释路由
-      route_config: 路由参数配置
       controller: 控制器
       basic_controller: 基础控制器
       di_controller: 控制器参数注入

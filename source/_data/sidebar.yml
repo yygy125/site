@@ -29,7 +29,6 @@ fastd:
     route:
       basic_route: basic_route.html
       annotation_route: annotation_route.html
-      route_config: route_config.html
     controller:
       basic_controller: controller.html
       di_controller: di_controller.html

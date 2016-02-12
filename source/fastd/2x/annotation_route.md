@@ -24,7 +24,7 @@ use FastD\Http\Response;
 /**
  * Class Index
  *
- * @package Welcome\Events\Http
+ * @package Welcome\Controller
  */
 class Index extends Controller
 {

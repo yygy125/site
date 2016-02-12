@@ -82,7 +82,7 @@ Routes::group('/demo', function () {
 });
 ```
 
-解析: `/demo/v1/`
+解析: `/demo/v1` 或者 `/demo/v1/`
 
 > 对于路由是以 `/` 结尾的, 自动匹配无 `/` 结尾或着有 `/` 结尾的 `pathinfo` 地址.
 

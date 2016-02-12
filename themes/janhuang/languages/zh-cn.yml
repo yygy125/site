@@ -58,6 +58,8 @@ sidebar:
       database: 数据库操作
       database_orm: 对象关系映射(ORM)
       database_configuration: 数据库配置
+      database_builder: QueryBuilder
+      database_command: 数据库管理命令
       database_repository: Repository
       database_curd: 数据库驱动
       database_page: 查询分页

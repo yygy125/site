@@ -38,6 +38,8 @@ fastd:
     database:
       database_configuration: db-configuration.html
       database_orm: db-orm.html
+      database_builder: db-builder.html
+      database_command: db-command.html
       database_page: db-page.html
     command:
       preset_command: preset_command.thml

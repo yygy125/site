@@ -43,6 +43,8 @@ class Index extends Controller
 
 `@Route` 就是路由标识, 通过标示对路由进行定义, 其定义的方式会与平时咱们的 `PHP` 代码去注释略有些不一样.
 
+> 注释路由定义中, 必须使用双引号 `"` 进行定义.
+
 ### @Route 标识
 
 ```php

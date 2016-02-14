@@ -192,3 +192,54 @@ class Index extends Controller
 ```
 
 在初始化的时候通过赋值主键id, 会自动寻找该条纪录, 然后通过 `get` 方法进行字段获取.
+
+## 使用 `Repository` 进行数据库操作
+
+```php
+<?php
+
+namespace Welcome\Controllers;
+
+use FastD\Database\Drivers\Query\MySQLQueryBuilder;
+use FastD\Framework\Bundle\Controllers\Controller;
+use FastD\Http\Request;
+use FastD\Http\Response;
+use Welcome\Orm\Entity\Test;
+use Welcome\Orm\Repository\TestRepository;
+
+/**
+ * Class Index
+ *
+ * @package Welcome\Controller
+ */
+class Index extends Controller
+{
+    /**
+     * @Route("/orm/repository/{id}", name="welcome_repository", defaults={"id": "0"})
+     *
+     * @param int $id
+     * @return Response|string
+     */
+    public function repositoryAction($id)
+    {
+        try {
+            $driver = $this->getDriver('read');
+        } catch (\Exception $e) {
+            return $this->response('fail');
+        }
+
+        $repository = new TestRepository($driver);
+
+        if (empty($id)) {
+            $result = $repository->findAll();
+        } else {
+            $result = $repository->find(['id' => $id]);
+        }
+
+        return $this->response(json_encode($result));
+    }
+}
+```
+
+访问指定 `repository` 路由, 就可以使用 `Repository` 进行简单的操作了, 操作方式和 `Entity` 一样.
+
